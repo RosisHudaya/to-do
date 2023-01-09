@@ -1,38 +1,71 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.task-bg {
+  background-color: #555;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 10px 140px 10px 15px;
+  text-align: left;
+  font-size: 22px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-bg div {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.task-bg .done .task-text {
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
+.task-bg .task-number {
+  color: #999;
+  font-size: 14px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-right: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.task-bg .task-text {
+  flex: 1;
+  margin-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-bg .icon-wrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: auto;
+  display: inline-block;
+}
+
+.task-bg .icon-wrap span {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  color: #00ff89;
+}
+
+.task-bg .icon-wrap span:hover {
+  color: yellow;
+}
+
+.mr-20 {
+  margin-right: 20px;
 }
